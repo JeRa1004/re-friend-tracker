@@ -160,7 +160,7 @@
       },
       {
         "id": "AddActivityForm",
-        "title": "Activity",
+        "title": "Add Activity to Friend",
         "url": "/friend/:friendKey/activity",
         "formFieldList": [
           {
@@ -244,16 +244,43 @@
             "color": "blue",
             "search": true,
             "url": "/friend",
+            "page": "frienddetailpage"
+          }
+        ]
+      },
+      {
+        "id": "frienddetailpage",
+        "elementList": [
+          {
+            "type": "backbutton"
+          },
+          {
+            "type": "button",
+            "name": "Edit Friend",
+            "icon": "fa-edit",
+            "color": "green",
             "form": {
               "form": "FriendForm"
             }
           },
           {
-            "type": "button",
-            "name": "Activities",
+            "type": "newButton",
+            "name": "Add Activity",
+            "icon": "fa-plus",
+            "color": "green",
+            "form": {
+              "form": "AddActivityForm"
+            }
+          },
+          {
+            "type": "list",
             "icon": "fa-star",
-            "color": "orange",
-            "page": "friendactivitypage"
+            "color": "blue",
+            "search": true,
+            "url": "/friend/:friendKey/activity",
+            "form": {
+              "form": "ActivityForm"
+            }
           }
         ]
       },
@@ -333,33 +360,6 @@
             "color": "blue",
             "search": true,
             "url": "/activity",
-            "form": {
-              "form": "ActivityForm"
-            }
-          }
-        ]
-      },
-      {
-        "id": "friendactivitypage",
-        "elementList": [
-          {
-            "type": "backbutton"
-          },
-          {
-            "type": "newButton",
-            "name": "AddActivity",
-            "icon": "fa-plus",
-            "color": "green",
-            "form": {
-              "form": "AddActivityForm"
-            }
-          },
-          {
-            "type": "list",
-            "icon": "fa-star",
-            "color": "blue",
-            "search": true,
-            "url": "/friend/:friendKey/activity",
             "form": {
               "form": "ActivityForm"
             }
